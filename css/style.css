@@ -1,0 +1,76 @@
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+}
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf") format("ttf");
+  font-weight: 400 700 800;
+}
+.navbar {
+  --bs-navbar-toggler-border-color: transparent;
+}
+.navbar-nav {
+  --bs-nav-link-hover-color: var(--soft-orange);
+}
+.navbar-toggler-icon {
+  width: 2em;
+}
+@media (max-width: 991px) {
+  .navbar-collapse {
+    width: 0;
+    opacity: 0;
+    height: 100vh;
+    position: absolute;
+    z-index: 9999;
+    background: white;
+    top: 0;
+    right: 0;
+    transition: 0.5s ease;
+  }
+}
+.navbar-collapse.open {
+  width: 250px;
+  opacity: 1;
+}
+.navbar-collapse.show .btn-close,
+.navbar-collapse.collapsing .btn-close {
+  display: block !important;
+}
+.collapsing {
+  height: 100vh !important;
+}
+.btn-main {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--soft-red);
+  --bs-btn-border-color: var(--soft-red);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--very-dark-blue);
+  --bs-btn-hover-border-color: var(--very-dark-blue);
+}
+.text-main {
+  color: var(--very-dark-blue);
+}
+.text-gray {
+  color: var(--dark-grayish-blue);
+}
+.text-soft-orange {
+  color: var(--soft-orange);
+}
+.bg-main {
+  background-color: var(--very-dark-blue);
+}
+.link {
+  transition: 0.5s ease;
+}
+.link:hover {
+  color: var(--soft-orange) !important;
+}
+.border-gray {
+  --bs-border-color: var(--dark-grayish-blue);
+}
+.small-img {
+  width: 100px;
+}
